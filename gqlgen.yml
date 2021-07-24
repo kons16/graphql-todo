@@ -1,0 +1,20 @@
+schema:
+  - graph/*.graphqls
+
+exec:
+  filename: graph/generated/generated.go
+  package: generated
+
+model:
+  filename: graph/model/models_gen.go
+
+resolver:
+  filename: graph/resolver.go
+  type: Resolver
+
+autobind:
+  - "github.com/kons16/graphql-todo/graph/models"
+
+models:
+  Todo:
+    model: github.com/kons16/graphql-todo/models.Todo
