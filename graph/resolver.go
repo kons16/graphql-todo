@@ -24,7 +24,7 @@ func (r *queryResolver) Todos(ctx context.Context) ([]*models.Todo, error) {
 	log.Printf("queryResolver.Todos")
 	tasks, err := r.TaskRepo.GetAllTasks()
 	if err != nil {
-		log.Print(err)
+		log.Println(err)
 		return nil, err
 	}
 	return tasks, nil
