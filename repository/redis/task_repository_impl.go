@@ -41,7 +41,15 @@ func (tr *TaskRepository) GetAllTasks() ([]*models.Todo, error) {
 		todos = append(todos, val)
 	}
 
-	return nil, nil
+	a := models.Todo{
+		ID:   "1",
+		Text: "aaa",
+	}
+	tasks := []*models.Todo{
+		&a,
+	}
+
+	return tasks, nil
 }
 
 func (tr *TaskRepository) GetTask(id string) (*models.Todo, error) {

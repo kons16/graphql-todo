@@ -21,7 +21,7 @@ func (r *mutationResolver) CreateTodo(ctx context.Context, input model.NewTodo) 
 }
 
 func (r *queryResolver) Todos(ctx context.Context) ([]*models.Todo, error) {
-	log.Printf("wueryResolver.Todos")
+	log.Printf("queryResolver.Todos")
 	tasks, err := r.TaskRepo.GetAllTasks()
 	if err != nil {
 		log.Print(err)
